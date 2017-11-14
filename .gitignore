@@ -1,83 +1,21 @@
-## OS and Utility Stuff ##
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# XML feed exclude
-public/feed/trybooking_feed.xml
+# dependencies
+/node_modules
 
-#==================#
-#     OS Files     #
-#==================#
+# testing
+/coverage
+
+# production
+/build
+
+# misc
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-*[Tt]humbs.db
-*.Trashes
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-
-#===================================#
-#           Package Files           #
-#===================================#
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-*.bak
-
-
-#===================================#
-#         Development Files         #
-#===================================#
-*.idea
-*.sublime-*
-*.todo
-notes.md
-gruntfile.js
-_notes/
-.sass-cache
-*.css.map
-*.js.map
-
-
-#==================#
-#    Log files     #
-#==================#
-*.log
-logs
-error_log
-access_log
 npm-debug.log*
-
-
-#===================================#
-#       Config. and npm Files       #
-#===================================#
-node_modules
-*node_modules*
-
-#===================================#
-#       Built FED Assets            #
-#===================================#
-/css/styles.css
-/js/dist/app.compiled.js
-
-#===================================#
-#      CMS Cache & Media Files      #
-#===================================#
-images/remote/
-images/made/
-uploads/
-sized/
-thumbs/
-_thumbs/
-
-# Make sure to include log folders from inside craft plugins as they may contain templates and other important files.
-!craft/plugins/**/logs
+yarn-debug.log*
+yarn-error.log*
