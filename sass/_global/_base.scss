@@ -1,0 +1,115 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: 1px dotted #f1f1f1;
+}
+
+// Text highlight
+::selection {
+	color: $text-highlight-color;
+	background: $text-highlight-bg-color;
+}
+
+::-moz-selection {
+	color: $text-highlight-color;
+	background: $text-highlight-bg-color;
+}
+
+html,
+body {
+	-moz-osx-font-smoothing: auto;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased !important;
+	color: $c-font;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+	min-width: 320px;
+	position: relative;
+	text-rendering: optimizeLegibility !important;
+	width: 100%;
+	z-index: 0;
+}
+
+body {
+	font-size: toRems($base-font-size);
+}
+
+// Links
+a[href*="mailto:"] {
+	word-wrap: break-word;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+}
+
+// Reset Lists
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// Images
+figure {
+	margin: 0;
+}
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+// Paragraph
+p {
+	margin-top: 0;
+	margin-bottom: $spacing-medium;
+
+	b,
+	strong {
+		font-weight: $font-weight-semibold;
+	}
+
+	i,
+	em {
+		font-style: italic;
+	}
+}
+
+// Default Transitions
+a,
+input[type="text"],
+textarea,
+button,
+[class^="c-btn"] {
+	-webkit-tap-highlight-color: $tap-highlight-color;
+	transition-duration: 0.5s;
+	transition-property: background-color, color, opacity, border, border-color, background-position, outline, box-shadow, border-bottom, text-decoration, left, top, transform;
+	transition-timing-function: $global-easing;
+	transform-origin: center center;
+}

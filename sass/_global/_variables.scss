@@ -1,0 +1,99 @@
+// Site
+$max-site-width: 1200px;
+
+// Font families
+$font-name: 'Open Sans', Arial, sans-serif;
+$font-name1: 'font-name-1', Georgia, serif;
+
+// Font sizes
+$font-size-1: toRems(50px);
+$font-size-2: toRems(32px);
+$font-size-3: toRems(24px);
+$font-size-4: toRems(20px);
+$font-size-5: toRems(15px);
+
+// Small font sizes
+$font-small: toRems(14px);
+$font-xsmall: toRems(12px);
+$font-xxsmall: toRems(11px);
+
+// Font weights
+$font-weight-thin: 100;
+$font-weight-xlight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+$font-weight-black: 900;
+
+// Base Variables
+$base-font-family: $font-name, arial;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 1.6;
+
+// Breakpoints
+$bp-xlarge: min-width 1200px;
+$bp-large: min-width 992px;
+$bp-medium: min-width 768px;
+$bp-small: min-width 540px;
+$bp-xsmall: max-width 540px;
+
+// Z-indexes
+$z-header: 1000;
+$z-modal: 2000;
+
+// Global variables
+$global-radius: 4px;
+$global-easing: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+// Global spacing
+$spacing-xxsmall: toRems(5px);
+$spacing-xsmall: toRems(10px);
+$spacing-small: toRems(15px);
+$spacing-base: toRems(20px);
+$spacing-medium: toRems(30px);
+$spacing-large: toRems(50px);
+$spacing-xlarge: toRems(100px);
+
+// Global colors
+$c-white: #ffffff;
+$c-black: #000000;
+$c-grey-light: #b3b3b3;
+$c-grey-xlight: #f7f7f7;
+$c-grey-xdark: #1a1a1a;
+
+// Brand Colors
+$c-brand: $c-grey-xdark;
+
+// Typography colors
+$c-link: #754acc;
+$c-link-hover: palette(color, light);
+$c-link-visited: palette(color, light);
+$c-font: $c-grey-xdark;
+$c-placeholder: $c-grey-xdark;
+$c-border: palette(color);
+
+// Text highlight colors
+$text-highlight-color: $c-white;
+$text-highlight-bg-color: $c-grey-xdark;
+$tap-highlight-color: rgba(255, 255, 255, 0);
+
+// Social colors
+$c-facebook: #3b5998;
+$c-google-plus: #dd4b39;
+$c-instagram: #125688;
+$c-linked-in: #007bb5;
+$c-pinterest: #cb2027;
+$c-twitter: #00aced;
+$c-youtube: #bb0000;
+
+// CALCUATED FLEXIBLE PERCENTAGE GUTTERS
+// Converts the half the gutter to a percetange of the max-site-width
+$flex-gutter-base: 20px / $max-site-width * 100;
+$flex-gutter-offset: -($flex-gutter-base + %); // We use this for an offset for the grid container
+$flex-gutter-2: ($flex-gutter-base * 2) + %; // times it by 2 for 2 column layouts
+$flex-gutter-3: ($flex-gutter-base * 3) + %; // times it by 3 for 3 column layouts
+$flex-gutter-4: ($flex-gutter-base * 4) + %; // times it by 4 for 4 column layouts

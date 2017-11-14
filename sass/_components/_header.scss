@@ -1,0 +1,17 @@
+.c-header {
+	align-items: center;
+	background: $c-grey-xdark;
+	display: flex;
+	height: toRems(60px);
+	padding: 0 $spacing-medium;
+
+	&__title {
+		font-size: $font-size-4;
+		margin: 0;
+
+		a,
+		a:visited {
+			color: $c-white;
+		}
+	}
+}

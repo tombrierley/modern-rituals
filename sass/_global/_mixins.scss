@@ -1,0 +1,46 @@
+// -------------------------------------------------------------------
+// [Clearfix]
+// @Description:
+// Contain floats
+// @Usage:
+// @include clearfix;
+// -------------------------------------------------------------------
+
+@mixin clearfix {
+	zoom: 1;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// CLEAR FIX
+.clearfix {
+	@include clearfix;
+}
+
+// -------------------------------------------------------------------
+// [Visually Hidden]
+// @Description:
+// Visually hides an item but leaves it available for accessability purposes.
+// @Usage:
+// @include visually-hidden;
+// -------------------------------------------------------------------
+
+@mixin visually-hidden {
+	border: 0 !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px !important;
+	overflow: hidden;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+}

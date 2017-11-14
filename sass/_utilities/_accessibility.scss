@@ -1,0 +1,14 @@
+.u-visually-hidden {
+	@include visually-hidden;
+}
+
+.u-skip-to-content {
+	left: 0;
+	margin-left: -9999em;
+	position: absolute;
+	top: 0;
+
+	&:focus {
+		margin-left: 0;
+	}
+}

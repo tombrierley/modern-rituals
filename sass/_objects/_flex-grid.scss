@@ -1,0 +1,95 @@
+.o-flex-grid {
+    align-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @include breakpoint($bp-small) {
+        margin: 0 $flex-gutter-offset;
+    }
+
+    &__item {
+        display: inline-block;
+        flex: 0 0 100%;
+        margin-bottom: $spacing-base;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint($bp-small) {
+            flex-basis: 50%;
+            margin-bottom: 0;
+            width: 50%;
+        }
+
+        @include breakpoint($bp-medium) {
+            flex-basis: 25%;
+            width: 25%;
+        }
+    }
+
+    &__content {
+        height: 100%;
+        padding: 0;
+
+        @include breakpoint($bp-small) {
+            padding: 0 $flex-gutter-2 $spacing-base $flex-gutter-2;
+        }
+
+        @include breakpoint($bp-medium) {
+            padding: 0 $flex-gutter-4 $spacing-medium $flex-gutter-4;
+        }
+    }
+
+    // three column layout
+    &--three-col {
+        .o-flex-grid__item {
+            @include breakpoint($bp-medium) {
+                flex-basis: 50%;
+                width: 50%;
+            }
+
+            @include breakpoint($bp-large) {
+                flex-basis: 33.33333%;
+                width: 33.33333%;
+            }
+        }
+
+        .o-flex-grid__content {
+            @include breakpoint($bp-medium) {
+                padding: 0 $flex-gutter-2 $spacing-base $flex-gutter-2;
+            }
+
+            @include breakpoint($bp-large) {
+                padding: 0 $flex-gutter-3 $spacing-medium $flex-gutter-3;
+            }
+        }
+    }
+
+    // two column layout
+    &--two-col {
+        .o-flex-grid__item {
+            @include breakpoint($bp-medium) {
+                flex-basis: 50%;
+                width: 50%;
+            }
+
+            @include breakpoint($bp-large) {
+                flex-basis: 50%;
+                width: 50%;
+            }
+        }
+
+        .o-flex-grid__content {
+            @include breakpoint($bp-medium) {
+                padding: 0 $flex-gutter-2 $spacing-base $flex-gutter-2;
+            }
+
+            @include breakpoint($bp-large) {
+                padding: 0 $flex-gutter-2 $spacing-base $flex-gutter-2;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.c-card {
+	border-bottom: solid toRems(3px) $c-white;
+	transition: border 500ms $global-easing;
+    background-color: $c-white;
+    text-align: center;
+
+	&:hover {
+		border-color: $c-brand;
+	}
+
+    &__inner {
+        padding: $spacing-medium;
+    }
+
+	&__title {
+		@include heading-3;
+		color: $c-font;
+	}
+
+    &__author {
+        @include small-caps;
+		color: $c-brand;
+        margin-bottom: $spacing-xsmall;
+    }
+
+    &__date {
+        @include small-caps;
+        color: $c-grey-light;
+        margin: 0;
+    }
+}

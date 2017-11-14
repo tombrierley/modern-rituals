@@ -1,0 +1,11 @@
+.o-section {
+    padding: 0 $spacing-xlarge;
+
+    @include breakpoint($bp-medium) {
+        padding: $spacing-large 0;
+    }
+
+    &--grey {
+        background: $c-grey-xlight;
+    }
+}

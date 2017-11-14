@@ -1,0 +1,42 @@
+// -------------------------------------------------------------------
+// [Px to em]
+// @Description:
+// Returns pixel value as ems based on the relative font-size
+// @Usage:
+// font-size: toEms(14px);
+// font-size: toEms(28px, 16px);
+// -------------------------------------------------------------------
+
+@function toEms($target, $context: 16px) {
+	@if $target == 0 {
+		@return 0
+	}
+	@return $target / $context + 0em;
+}
+
+// -------------------------------------------------------------------
+// [Px to rem]
+// @Description:
+// Returns pixel value as rems based on the base font-size
+// @Usage:
+// font-size: toRems(14px);
+// -------------------------------------------------------------------
+
+@function toRems($target) {
+	@if $target == 0 {
+		@return 0
+	}
+	@return $target / 16px + 0rem;
+}
+
+// -------------------------------------------------------------------
+// [Px to percentage]
+// @Description:
+// Returns a percentage value of pixel value compared to context value
+// @Usage:
+// width: toPercentage(120, 60);
+// -------------------------------------------------------------------
+
+@function toPercentage($target, $context) {
+	@return (($target / $context) * 100%);
+}
