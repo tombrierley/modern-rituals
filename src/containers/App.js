@@ -7,39 +7,39 @@ import Section from '../components/Section';
 import Home from '../components/Home';
 
 // Import Styles
-import '../../scss/app.scss';
+import '../sass/styles.scss';
 
-const blockList = [
+const sectionList = [
   {
     title: 'Home',
     id: 'home',
-    url: ''
+    url: '',
   },
   {
     title: 'Music',
     id: 'music',
-    url: '#music'
+    url: '#music',
   },
   {
     title: 'Gigs',
     id: 'gigs',
-    url: '#gigs'
+    url: '#gigs',
   },
   {
     title: 'Merch',
     id: 'merch',
-    url: '#merch'
+    url: '#merch',
   },
   {
     title: 'Blog',
     id: 'blog',
-    url: '#blog'
+    url: '#blog',
   },
   {
     title: 'Contact',
     id: 'contact',
-    url: '#contact'
-  }
+    url: '#contact',
+  },
 ];
 
 // Main App Componenet - Loads in the nav and the blocks
@@ -47,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="id" className="app">
-        <Nav blockList={blockList} />
+        <Nav sectionList={sectionList} />
         <Section sectionId="home">
           <Home />
         </Section>
